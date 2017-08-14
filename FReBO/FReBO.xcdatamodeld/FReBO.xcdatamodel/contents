@@ -2,11 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FReBOUser" representedClassName="FReBOUser" syncable="YES" codeGenerationType="class"/>
     <entity name="Listing" representedClassName="Listing" syncable="YES" codeGenerationType="class">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="FReBOUser" positionX="-63" positionY="-18" width="128" height="45"/>
-        <element name="Listing" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Listing" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>
