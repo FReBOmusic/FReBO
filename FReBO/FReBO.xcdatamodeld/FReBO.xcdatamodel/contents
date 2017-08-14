@@ -5,9 +5,10 @@
         <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="FReBOUser" positionX="-63" positionY="-18" width="128" height="45"/>
-        <element name="Listing" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Listing" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>
