@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FReBOUser" representedClassName="FReBOUser" syncable="YES" codeGenerationType="class">
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -12,7 +13,7 @@
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FReBOUser" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="FReBOUser" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Listing" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>
