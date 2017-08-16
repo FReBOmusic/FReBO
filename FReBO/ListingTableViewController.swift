@@ -10,6 +10,42 @@ import UIKit
 
 class ListingTableViewController: UITableViewController {
 
+    var listings = [Array<FBListing>]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    var searchText: String? {
+        didSet {
+            listings.removeAll()
+            searchForListings()
+            title = searchText
+        }
+    }
+    
+    private var lastFReBORequest: FBRequest?
+    
+    private var freboRequest: FBRequest? {
+        if let query = searchText, !query.isEmpty {
+            return FBRequest(search: query + " -filter:", count: 100)
+        }
+    }
+    private func searchForListings() {
+        if let request = freboRequest {
+            lastFReBORequest = request
+            request.fetchListings { [weak _self = self] newListings in
+                dispatch_async(dispatch_get_main_queue()) {
+                    if request == _self.lastFReBORequest {
+                        if !newListings.isEmpty {
+                            _self?.listings.insert(newListings, atIndex: 0)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,20 +53,22 @@ class ListingTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return listings.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return listings[section].count
     }
 
-    
+    private struct Storyboard {
+        static let ListingCellIdentifier = "Listing"
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ListingCellIdentifier, for: indexPath)
 
-        // Configure the cell...
+        let fblisting = listings[indexPath.section][indexPath.row]
+        cell.textLabel?.text = fblisting.text
+        cell.detailTextLabel?.text = fblisting.user.username
 
         return cell
     }
