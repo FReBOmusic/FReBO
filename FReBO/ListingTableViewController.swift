@@ -67,8 +67,8 @@ class ListingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ListingCellIdentifier, for: indexPath)
 
         let fblisting = listings[indexPath.section][indexPath.row]
-        cell.textLabel?.text = fblisting.text
-        cell.detailTextLabel?.text = fblisting.user.username
+        //cell.textLabel?.text = fblisting.text
+        //cell.detailTextLabel?.text = fblisting.user.username
 
         return cell
     }
