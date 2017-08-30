@@ -65,8 +65,7 @@
 				92314A831F43DD8700E62E82 /* ListingTableViewController.swift */,
 				92556A941F3E22E100EAB8B1 /* AppDelegate.swift */,
 				92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */,
-				92E8E83D1F571B9B0008FBE4 /* FBRequest.swift */,
-				92E8E83F1F571BB10008FBE4 /* FBListing.swift */,
+				92E8E8411F571F470008FBE4 /* FReBO Request */,
 			);
 			path = FReBO;
 			sourceTree = "<group>";
@@ -80,6 +79,15 @@
 			);
 			name = "Supporting Files";
 			path = FReBO;
+			sourceTree = "<group>";
+		};
+		92E8E8411F571F470008FBE4 /* FReBO Request */ = {
+			isa = PBXGroup;
+			children = (
+				92E8E83D1F571B9B0008FBE4 /* FBRequest.swift */,
+				92E8E83F1F571BB10008FBE4 /* FBListing.swift */,
+			);
+			name = "FReBO Request";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
