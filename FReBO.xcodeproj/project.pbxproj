@@ -14,6 +14,8 @@
 		92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */; };
 		92556A9F1F3E22E100EAB8B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92556A9E1F3E22E100EAB8B1 /* Assets.xcassets */; };
 		92556AA21F3E22E100EAB8B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92556AA01F3E22E100EAB8B1 /* LaunchScreen.storyboard */; };
+		92E8E83E1F571B9B0008FBE4 /* FBRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8E83D1F571B9B0008FBE4 /* FBRequest.swift */; };
+		92E8E8401F571BB10008FBE4 /* FBListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8E83F1F571BB10008FBE4 /* FBListing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		92556A9E1F3E22E100EAB8B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92556AA11F3E22E100EAB8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92556AA31F3E22E100EAB8B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E8E83D1F571B9B0008FBE4 /* FBRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequest.swift; sourceTree = "<group>"; };
+		92E8E83F1F571BB10008FBE4 /* FBListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBListing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				920B53331F43FA6E00A8E106 /* ListingTableViewCell.swift */,
 				92556A941F3E22E100EAB8B1 /* AppDelegate.swift */,
 				92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */,
+				92E8E83D1F571B9B0008FBE4 /* FBRequest.swift */,
+				92E8E83F1F571BB10008FBE4 /* FBListing.swift */,
 			);
 			path = FReBO;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 				92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */,
 				920B53341F43FA6E00A8E106 /* ListingTableViewCell.swift in Sources */,
 				92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */,
+				92E8E83E1F571B9B0008FBE4 /* FBRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

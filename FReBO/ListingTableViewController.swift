@@ -35,10 +35,10 @@ class ListingTableViewController: UITableViewController {
         if let request = freboRequest {
             lastFReBORequest = request
             request.fetchListings { [weak _self = self] newListings in
-                dispatch_async(dispatch_get_main_queue()) {
-                    if request == _self.lastFReBORequest {
+                DispatchQueue.main.async {
+                    if request == _self?.lastFReBORequest {
                         if !newListings.isEmpty {
-                            _self?.listings.insert(newListings, atIndex: 0)
+                            _self?.listings.insert(newListings, at: 0)
                         }
                     }
                 }
@@ -67,8 +67,8 @@ class ListingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ListingCellIdentifier, for: indexPath)
 
         let fblisting = listings[indexPath.section][indexPath.row]
-        cell.textLabel?.text = fblisting.text
-        cell.detailTextLabel?.text = fblisting.user.username
+        //cell.textLabel?.text = fblisting.text
+        //cell.detailTextLabel?.text = fblisting.user.username
 
         return cell
     }
