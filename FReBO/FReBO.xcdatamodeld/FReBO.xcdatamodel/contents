@@ -11,11 +11,12 @@
     <entity name="Listing" representedClassName="Listing" syncable="YES" codeGenerationType="class">
         <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FReBOUser" inverseName="listings" inverseEntity="FReBOUser" syncable="YES"/>
     </entity>
     <elements>
         <element name="FReBOUser" positionX="-243" positionY="-9" width="128" height="133"/>
-        <element name="Listing" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Listing" positionX="-54" positionY="-9" width="128" height="120"/>
     </elements>
 </model>
