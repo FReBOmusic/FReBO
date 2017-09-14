@@ -10,4 +10,8 @@ import UIKit
 
 class ListingTableViewCell: UITableViewCell {
     
+    override func viewDidLoad() {
+        super.viewDIdLoad()
+    }
+    
 }
