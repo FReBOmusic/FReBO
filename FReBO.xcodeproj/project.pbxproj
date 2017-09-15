@@ -10,6 +10,7 @@
 		920B53341F43FA6E00A8E106 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B53331F43FA6E00A8E106 /* ListingTableViewCell.swift */; };
 		92314A841F43DD8700E62E82 /* ListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92314A831F43DD8700E62E82 /* ListingTableViewController.swift */; };
 		9232D5CD1F69AB5700FC973D /* ListingMediaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9232D5CC1F69AB5700FC973D /* ListingMediaPageViewController.swift */; };
+		925490FA1F6B7D8900DAD927 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925490F91F6B7D8900DAD927 /* extensions.swift */; };
 		92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92556A941F3E22E100EAB8B1 /* AppDelegate.swift */; };
 		92556A9A1F3E22E100EAB8B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92556A981F3E22E100EAB8B1 /* Main.storyboard */; };
 		92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 		920B53331F43FA6E00A8E106 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		92314A831F43DD8700E62E82 /* ListingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewController.swift; sourceTree = "<group>"; };
 		9232D5CC1F69AB5700FC973D /* ListingMediaPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingMediaPageViewController.swift; sourceTree = "<group>"; };
+		925490F91F6B7D8900DAD927 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		92556A911F3E22E100EAB8B1 /* FReBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FReBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92556A941F3E22E100EAB8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92556A991F3E22E100EAB8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				92E8E83F1F571BB10008FBE4 /* FBListing.swift */,
 				9232D5CC1F69AB5700FC973D /* ListingMediaPageViewController.swift */,
 				92F16A2C1F69ECC900A625A8 /* ListingMediaViewController.swift */,
+				925490F91F6B7D8900DAD927 /* extensions.swift */,
 			);
 			path = FReBO;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */,
 				9232D5CD1F69AB5700FC973D /* ListingMediaPageViewController.swift in Sources */,
 				920B53341F43FA6E00A8E106 /* ListingTableViewCell.swift in Sources */,
+				925490FA1F6B7D8900DAD927 /* extensions.swift in Sources */,
 				92E8E8401F571BB10008FBE4 /* FBListing.swift in Sources */,
 				92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */,
 				92E8E83E1F571B9B0008FBE4 /* FBRequest.swift in Sources */,
@@ -294,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FReBO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frebomusic.FReBO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FReBO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frebomusic.FReBO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

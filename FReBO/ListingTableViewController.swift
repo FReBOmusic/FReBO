@@ -19,32 +19,33 @@ class ListingTableViewController: UITableViewController {
     var searchText: String? {
         didSet {
             listings.removeAll()
-            searchForListings()
+            //searchForListings()
             title = searchText
         }
     }
     
     private var lastFReBORequest: FBRequest?
     
-    private var freboRequest: FBRequest? {
+    /*private var freboRequest: FBRequest? {
         if let query = searchText, !query.isEmpty {
             return FBRequest(search: query + " -filter:", count: 100)
         }
-    }
+    }*/
+    /*
     private func searchForListings() {
         if let request = freboRequest {
             lastFReBORequest = request
             request.fetchListings { [weak _self = self] newListings in
                 DispatchQueue.main.async {
-                    if request == _self?.lastFReBORequest {
-                        if !newListings.isEmpty {
-                            _self?.listings.insert(newListings, at: 0)
-                        }
-                    }
+                    //if request == _self?.lastFReBORequest {
+                        //if !newListings.isEmpty {
+                            //_self?.listings.insert(newListings, at: 0)
+                        //}
+                    //}
                 }
             }
         }
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,17 +62,27 @@ class ListingTableViewController: UITableViewController {
     }
 
     private struct Storyboard {
-        static let ListingCellIdentifier = "Listing"
+        static let ListingCellIdentifier = "ListingCell"
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ListingCellIdentifier, for: indexPath)
-
-        let fblisting = listings[indexPath.section][indexPath.row]
+        let pageViewController : ListingPageViewController
+        
+        addChildViewController(pageViewController)
+        pageViewController.didMove(toParentViewController: self)
+        (cell as? ListingTableViewCell).pageViewController = pageViewController
+        //let fblisting = listings[indexPath.section][indexPath.row]
         //cell.textLabel?.text = fblisting.text
         //cell.detailTextLabel?.text = fblisting.user.username
 
         return cell
     }
+    /*
+    override func tableView(_ tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {
+        
+        // Remove ListingMediaPageViewControllers from hierarchy
+        (cell as? ListingTableViewCell)?.pageViewController = nil
+    } */
     
 
     /*

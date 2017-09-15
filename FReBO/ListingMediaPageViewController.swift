@@ -10,59 +10,65 @@ import UIKit
 
 class ListingMediaPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var imageMedia : [UIViewController]?
+    var imageMedia : [String]
+    var currentIndex : Int = 0
+    
+    convenience init(links: [String]) {
+        self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        imageMedia = links
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupUI(index: Int, link: String) -> ListingMediaViewController {
+        let listingMediaViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListingMediaViewController") as! ListingMediaViewController
+        listingMediaViewController.setValues(index: index, link: link)
+        return listingMediaViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         self.delegate = self
         
-        if let first = imageMedia?.first {
-            setViewControllers([first], direction: .forward, animated: true, completion: nil)
+        if let first = imageMedia.first {
+            setViewControllers([setupUI(index: 0, link: first)], direction: .forward, animated: true, completion: nil)
         }
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        if let mediaArr = imageMedia {
-            guard let viewControllerIndex = mediaArr.index(of: viewController) else { return nil }
-            
-            let previousIndex = viewControllerIndex - 1
-            
-            if previousIndex < 0 {
-                return mediaArr[mediaArr.count + previousIndex]
-            }
-            
-            return mediaArr[previousIndex]
+        let viewControllerIndex = (viewController as! ListingMediaViewController).index
+        guard viewControllerIndex >= 0 else { return nil }
+        
+        var previousIndex = viewControllerIndex - 1
+        
+        if previousIndex < 0 {
+            previousIndex += imageMedia.count
         }
         
-        return nil
+        currentIndex = previousIndex
+        return setupUI(index: previousIndex, link: imageMedia[previousIndex])
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if let mediaArr = imageMedia {
-            guard let viewControllerIndex = mediaArr.index(of: viewController) else { return nil }
-            
-            let nextIndex = (viewControllerIndex + 1) % mediaArr.count
-            
-            return mediaArr[nextIndex]
-        }
         
-        return nil
+        let viewControllerIndex = (viewController as! ListingMediaViewController).index
+        guard viewControllerIndex >= 0 else { return nil }
+        
+        let nextIndex = (viewControllerIndex + 1) % imageMedia.count
+        currentIndex = nextIndex
+        return setupUI(index: nextIndex, link: imageMedia[nextIndex])
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return imageMedia!.count
+        return imageMedia.count
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        if let firstViewController = viewControllers?.first {
-            if let mediaArr = imageMedia {
-                guard let firstViewControllerIndex = mediaArr.index(of: firstViewController) else { return 0 }
-                return firstViewControllerIndex
-            }
-        }
-        return 0
+        return currentIndex
     }
     
 

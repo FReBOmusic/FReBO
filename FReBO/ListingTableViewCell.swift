@@ -10,8 +10,16 @@ import UIKit
 
 class ListingTableViewCell: UITableViewCell {
     
-    override func viewDidLoad() {
-        super.viewDIdLoad()
+    var pageViewController: ListingMediaPageViewController? {
+        willSet {
+            if let pvc = newValue {
+                pvc.view.frame = self.contentView.bounds
+                self.contentView.addSubview(pvc.view)
+            } else {
+                pageViewController?.removeFromParentViewController()
+                pageViewController?.view.removeFromSuperview()
+            }
+        }
     }
     
 }

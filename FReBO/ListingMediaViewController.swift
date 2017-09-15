@@ -11,17 +11,19 @@ import UIKit
 class ListingMediaViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
-    let url : URL!
-    let aspectRatio : Double
-    var image : UIImage?
-    var index : Int = 0
-    override var description: String {
-        return (url.absoluteString ?? "no url") + " (aspect ratio = \(aspectRatio))"
+    
+    var index : Int = -1 //Uninitialized
+    
+    var link : String = "" {
+        didSet {
+            self.imageView = UIImageView(link: link)
+        }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imageView.image = image
+    
+    func setValues(index: Int, link: String) {
+        self.index = index
+        self.link = link
     }
     
 }
+
