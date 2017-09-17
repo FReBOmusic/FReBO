@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920648E41F6F27820036507E /* FReBOUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920648E21F6F27820036507E /* FReBOUser+CoreDataClass.swift */; };
+		920648E51F6F27820036507E /* FReBOUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920648E31F6F27820036507E /* FReBOUser+CoreDataProperties.swift */; };
+		920648E81F6F3C770036507E /* FReBOListing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920648E61F6F3C770036507E /* FReBOListing+CoreDataClass.swift */; };
+		920648E91F6F3C770036507E /* FReBOListing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920648E71F6F3C770036507E /* FReBOListing+CoreDataProperties.swift */; };
 		92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92556A941F3E22E100EAB8B1 /* AppDelegate.swift */; };
 		92556A9A1F3E22E100EAB8B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92556A981F3E22E100EAB8B1 /* Main.storyboard */; };
 		92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		920648E21F6F27820036507E /* FReBOUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FReBOUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		920648E31F6F27820036507E /* FReBOUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FReBOUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		920648E61F6F3C770036507E /* FReBOListing+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FReBOListing+CoreDataClass.swift"; sourceTree = "<group>"; };
+		920648E71F6F3C770036507E /* FReBOListing+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FReBOListing+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		92556A911F3E22E100EAB8B1 /* FReBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FReBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92556A941F3E22E100EAB8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92556A991F3E22E100EAB8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +63,10 @@
 		92556A931F3E22E100EAB8B1 /* FReBO */ = {
 			isa = PBXGroup;
 			children = (
+				920648E61F6F3C770036507E /* FReBOListing+CoreDataClass.swift */,
+				920648E71F6F3C770036507E /* FReBOListing+CoreDataProperties.swift */,
+				920648E21F6F27820036507E /* FReBOUser+CoreDataClass.swift */,
+				920648E31F6F27820036507E /* FReBOUser+CoreDataProperties.swift */,
 				92556A981F3E22E100EAB8B1 /* Main.storyboard */,
 				92556A941F3E22E100EAB8B1 /* AppDelegate.swift */,
 				92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */,
@@ -145,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920648E51F6F27820036507E /* FReBOUser+CoreDataProperties.swift in Sources */,
 				92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */,
+				920648E91F6F3C770036507E /* FReBOListing+CoreDataProperties.swift in Sources */,
+				920648E81F6F3C770036507E /* FReBOListing+CoreDataClass.swift in Sources */,
+				920648E41F6F27820036507E /* FReBOUser+CoreDataClass.swift in Sources */,
 				92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +324,7 @@
 				92556AA81F3E22E100EAB8B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
