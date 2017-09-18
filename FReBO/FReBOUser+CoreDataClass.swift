@@ -20,10 +20,11 @@ public class FReBOUser: NSManagedObject {
         if let fReBOUser = (try? context.fetch(request))?.first as? FReBOUser {
             return fReBOUser
         } else if let fReBOUser = NSEntityDescription.insertNewObject(forEntityName: "FReBOUser", into: context) as? FReBOUser {
-            fReBOUser.screenName = fReBOInfo.screenName
+            fReBOUser.username = fReBOInfo.username
             fReBOUser.name = fReBOInfo.name
+            return fReBOUser
         }
-        
+        return nil
     }
 
 }
