@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListingTableViewController: UITableViewController, UITextFieldDelegate {
 
