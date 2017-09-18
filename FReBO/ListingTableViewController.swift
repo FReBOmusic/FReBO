@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 
 class ListingTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    // if this is nil, then we simply don't update the database
+    var managedObjectContext: NSManagedObjectContext? =
+        (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
 
     var listings = [Array<FBListing>]() {
         didSet {
