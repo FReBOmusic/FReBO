@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListingTableViewController: UITableViewController {
+class ListingTableViewController: UITableViewController, UITextFieldDelegate {
 
     var listings = [Array<FBListing>]() {
         didSet {
@@ -100,7 +100,7 @@ class ListingTableViewController: UITableViewController {
         let fbListing = listings[indexPath.section][indexPath.row]
         
         if let listingCell = cell as? ListingTableViewCell {
-            listingCell.listing = fbListing
+            listingCell.fbListing = fbListing
         }
 
         return cell
