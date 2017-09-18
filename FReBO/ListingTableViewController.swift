@@ -117,6 +117,14 @@ class ListingTableViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        searchText = textField.text
+        return true
+    }
+    
 
     /*
     // MARK: - Navigation
