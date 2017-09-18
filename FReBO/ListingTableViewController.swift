@@ -89,6 +89,10 @@ class ListingTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "\(listings.count - section)"
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return listings.count
