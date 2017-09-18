@@ -19,6 +19,7 @@ class ListingTableViewController: UITableViewController {
     var searchText: String? {
         didSet {
             listings.removeAll()
+            lastFReBORequest = nil
             searchForListings()
             title = searchText
         }
@@ -30,7 +31,9 @@ class ListingTableViewController: UITableViewController {
         if let query = searchText, !query.isEmpty {
             return FBRequest(search: query + " -filter:", count: 100)
         }
+        return lastFReBORequest?.requestForNewer
     }
+    
     private func searchForListings() {
         if let request = freboRequest {
             lastFReBORequest = request
@@ -41,13 +44,41 @@ class ListingTableViewController: UITableViewController {
                             _self?.listings.insert(newListings, at: 0)
                         }
                     }
+                    
+                    _self?.refreshControl?.endRefreshing()
                 }
             }
+        } else {
+            self.refreshControl?.endRefreshing()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    private func updateDatabase(newListings: [FBListing]) {
+        managedObjectContext?.performBlock {
+            for listingInfo in newListings {
+                // intentionally ignoring the return value
+                _ = FReBOListing.listingWithFReBOInfo(listingInfo, inManagedObjectContext: self.managedObjectContext!)
+            }
+            // there is a method in AppDelegate
+            // which will save the context as well
+            // but we're just showing how to save and catch any error here
+            do {
+                try self.managedObjectContext?.save()
+            } catch let error {
+                print("Core Data Error: \(error)")
+            }
+        }
+        // printDatabaseStatistics()
+        // note that even though we do this print()
+        // AFTER printDatabaseStatistics() is called
+        // it will print BEFORE because printDatabaseStatistics()
+        // returns immediately after putting a closure on the context's queue
+        // (that closure then runs sometime later, after this print())
+        print("done printing database statistics")
     }
 
     // MARK: - Table view data source
@@ -66,9 +97,11 @@ class ListingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ListingCellIdentifier, for: indexPath)
 
-        let fblisting = listings[indexPath.section][indexPath.row]
-        //cell.textLabel?.text = fblisting.text
-        //cell.detailTextLabel?.text = fblisting.user.username
+        let fbListing = listings[indexPath.section][indexPath.row]
+        
+        if let listingCell = cell as? ListingTableViewCell {
+            listingCell.listing = fbListing
+        }
 
         return cell
     }
