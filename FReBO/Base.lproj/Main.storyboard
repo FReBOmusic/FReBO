@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-1570" y="-403"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Create New Listing Tab-->
         <scene sceneID="9D5-pK-FNv">
             <objects>
-                <tabBarController storyboardIdentifier="Main Tab Panel" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cMe-bQ-kuF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main Tab Panel" title="Create New Listing Tab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cMe-bQ-kuF" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="atA-Ay-elG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -32,11 +31,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="4Vg-1Z-at6" kind="relationship" relationship="viewControllers" id="fNa-Pd-kgC"/>
+                        <segue destination="OYE-ap-dI0" kind="relationship" relationship="viewControllers" id="d0j-yB-afX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Cu-5P-nri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-606" y="-700"/>
+        </scene>
+        <!--Create New Listing-->
+        <scene sceneID="BOJ-Ag-8Ww">
+            <objects>
+                <viewController id="OYE-ap-dI0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hX5-jP-BCC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bp7-bO-Mhs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tim-w3-xNK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create New Listing" id="JGK-JW-ygQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uua-je-KOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="-960"/>
         </scene>
         <!--Search Tab-->
         <scene sceneID="aji-Bo-Tu1">
