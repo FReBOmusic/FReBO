@@ -149,7 +149,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EYR-tX-3Pd">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="iYm-oQ-2so"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="iYm-oQ-2so">
+                            <connections>
+                                <segue destination="W6e-PG-u79" kind="popoverPresentation" popoverAnchorBarButtonItem="iYm-oQ-2so" id="P6L-4t-Qwz">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuk-08-oDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -370,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXh-Vw-euX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517.60000000000002" y="1336.2818590704649"/>
+            <point key="canvasLocation" x="1001" y="-2297"/>
         </scene>
         <!--Search-->
         <scene sceneID="F6E-4v-8WD">
