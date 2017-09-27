@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92025DD01F7C12F700899A45 /* FilterScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92025DCF1F7C12F700899A45 /* FilterScreenTableViewController.swift */; };
+		92025DD21F7C143100899A45 /* FilterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92025DD11F7C143100899A45 /* FilterScreenViewController.swift */; };
 		92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92556A941F3E22E100EAB8B1 /* AppDelegate.swift */; };
 		92556A9A1F3E22E100EAB8B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92556A981F3E22E100EAB8B1 /* Main.storyboard */; };
 		92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92025DCF1F7C12F700899A45 /* FilterScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenTableViewController.swift; sourceTree = "<group>"; };
+		92025DD11F7C143100899A45 /* FilterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenViewController.swift; sourceTree = "<group>"; };
 		92556A911F3E22E100EAB8B1 /* FReBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FReBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92556A941F3E22E100EAB8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92556A991F3E22E100EAB8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,8 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				92556A981F3E22E100EAB8B1 /* Main.storyboard */,
+				92025DD11F7C143100899A45 /* FilterScreenViewController.swift */,
 				92556A941F3E22E100EAB8B1 /* AppDelegate.swift */,
 				92556A9B1F3E22E100EAB8B1 /* FReBO.xcdatamodeld */,
+				92025DCF1F7C12F700899A45 /* FilterScreenTableViewController.swift */,
 			);
 			path = FReBO;
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92025DD21F7C143100899A45 /* FilterScreenViewController.swift in Sources */,
+				92025DD01F7C12F700899A45 /* FilterScreenTableViewController.swift in Sources */,
 				92556A951F3E22E100EAB8B1 /* AppDelegate.swift in Sources */,
 				92556A9D1F3E22E100EAB8B1 /* FReBO.xcdatamodeld in Sources */,
 			);
