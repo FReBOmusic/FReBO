@@ -148,7 +148,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EYR-tX-3Pd"/>
+                    <navigationItem key="navigationItem" id="EYR-tX-3Pd">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="iYm-oQ-2so"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuk-08-oDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
